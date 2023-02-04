@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Chakrawyuha 2k23 In KES' B K Shroff College of Arts & M H Shroff College of Commerce Autonomous College">
+    <meta name="keywords" content="Chakrawyuha, kes college, chakrawyuha 2k23, break the barrier">
+    <meta name="author" content="Harsh soni">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.png">
+    <title>Chakrawyuha</title>
+    <style>
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: 'Cinzel Decorative', cursive;
+        }
+        .bg{
+              background-image: url('images/bg.svg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              top: 0px;
+              left: 0px;
+              bottom: 0px;
+              right: 0px;
+              height: 100vh;
+              width: 100vw;
+              position: fixed;
+               z-index: -1;
+            }
+        #preloader{
+        background-color: #bf7d19;
+        background-image: url('images/about-background.svg');
+        height: 100vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+        transition: 1s;
+        }
+        #preloader-text{
+            font-size: 100px;
+            color: white;
+        }
+       .head-back{
+            font-size: 7em;
+            color: white;
+            border-radius: 100%;
+            text-align: center;
+            margin-top: 2%;
+            text-shadow: 0 0 5px #bf7d19, 0 0 15px #bf7d19, 0 0 20px #bf7d19, 0 0 40px #bf7d19, 0 0 60px #ffffff, 0 0 10px #bf7d19, 0 0 98px #ffffff;
+        }
+        .sub-head{
+            font-size: 3em;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 5px #bf7d19, 0 0 15px #bf7d19, 0 0 20px #bf7d19, 0 0 40px #bf7d19, 0 0 60px #ffffff, 0 0 10px #bf7d19, 0 0 98px #ffffff;
+        }
+        button{
+            background-color: #bf7d19;
+            height: 3em;
+            border: none;
+            outline: none;
+            color: white;
+            font-family:  'Cinzel Decorative', cursive;
+            font-size: 21px;
+            padding: 1%;
+            transition: 0.2s;
+            width: 13em;
+            border-radius: 50px;
+        }
+        button:hover{
+            border: 3px solid #bf7d19;
+            background-color: white;
+            color: black;
+        }
+        .buttons{
+            text-align: center;
+            margin-top: 3%;
+        }
+        .about-event{
+            margin-left: -2%;
+        }
+        .contact-btn{
+            margin-left: 1%;
+        }
+        p{
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            text-shadow: 0 0 5px #bf7d19, 0 0 15px #bf7d19, 0 0 20px #bf7d19, 0 0 40px #bf7d19, 0 0 60px #ffffff, 0 0 10px #bf7d19, 0 0 98px #ffffff;
+        }
+        .about_event_page{
+            background-color: rgba(0, 0, 0, 0.562);
+            border-radius: 25px;
+            font-size: 27px;
+            padding: 2%;
+            text-align: justify;
+            text-justify: inter-word;
+            color: rgba(255, 255, 255, 0.87);
+            font-family: 'Dosis', sans-serif; 
+            padding-left: 6%;
+            padding-right: 6%;
+            padding-bottom: 5%;
+            background-image: url('images/about-background.svg');
+        }
+        .about_event_page h2{
+            font-family:  'Cinzel Decorative', cursive;
+            text-shadow: 0 0 5px #ffffff10, 0 0 15px #ffffff10, 0 0 20px #ffffff10, 0 0 40px #ffffff10, 0 0 60px #bf7d19, 0 0 10px #ffffff10, 0 0 98px #bf7d19;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.692);
+        }
+        .gallery-photos{
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            padding-top: 1%;
+            padding-bottom: 4%;
+            background-image: url('images/about-background.svg');
+            background-color: rgba(255, 255, 255, 0.048);
+            margin-top: 8%;
+            border-radius: 50px;
+        }
+      
+        .gallery-head{
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            text-shadow: 0 0 5px #0000005d, 0 0 15px #0000002d, 0 0 20px #0000002a, 0 0 40px #0300002f, 0 0 60px #bf7d19, 0 0 10px #00000042, 0 0 98px #bf7d19;
+
+        }
+        .mySlides {
+          display: none;
+        }
+        img {
+          vertical-align: middle;
+          height: min-content;
+        }
+        .main-photos{
+          
+            max-width: 26em;
+            position: relative;
+            margin: auto;
+            border: 3px solid #bf7d19;
+            box-shadow: 0 0 5px #bf7d199a, 0 0 10px #bf7d199a, 0 0 15px #bf7d199a, 0 0 20px #bf7d199a, 0 0 20px #ffffff75, 0 0 8px #bf7d199a, 0 0 58px #ffffffb7;
+          }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        .prev{
+            left: 0;
+    
+        }
+        .prev:hover, .next:hover {
+          background-color: #bf7d19;
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        @media only screen and (max-width: 300px) 
+        {
+          .prev, .next{font-size: 11px}
+        }
+        .end-footer{
+            margin-top: 10%;
+            background-color: rgba(0, 0, 0, 0.562);
+            border-radius: 25px;
+            font-size: 15px;
+            padding: 2%;
+            text-align: justify;
+            text-justify: inter-word;
+            color: rgba(255, 255, 255, 0.87);
+            font-family: 'Dosis', sans-serif; 
+            padding-left: 2%;
+            padding-right: 6%;
+            background-image: url('images/about-background.svg');
+
+        }
+        .end-footer h2{
+            font-family:  'Cinzel Decorative', cursive;
+            text-shadow: 0 0 5px #ffffff10, 0 0 15px #ffffff10, 0 0 20px #ffffff10, 0 0 40px #ffffff10, 0 0 60px #bf7d19, 0 0 10px #ffffff10, 0 0 98px #bf7d19;
+            color: rgba(255, 255, 255, 0.692);
+        }
+        .end-footer span a:hover{
+            text-decoration: underline;
+        }
+        .end-footer span a{
+            text-decoration: none;
+        }
+        .chat-with-us{
+          position: fixed;
+          text-align: center;
+          top: 75%;
+          left: 90%;
+          padding: 0.5%;
+          color: white;
+          
+        }
+        .chat-with-us img{
+          border-radius: 50px;
+          box-shadow: 0 0 5px #bf7d199a, 0 0 10px #bf7d199a, 0 0 15px #bf7d199a, 0 0 20px #bf7d199a, 0 0 20px #ffffff75, 0 0 8px #bf7d199a, 0 0 58px #ffffffb7;
+          
+        }
+        .chat-with-us div{
+          font-family: 'Dosis', sans-serif;
+          font-size: 20px;
+          
+        }
+        .brochure-link{
+          text-align: center;
+          text-shadow: 0 0 5px #ffffff10, 0 0 15px #ffffff10, 0 0 20px #ffffff10, 0 0 40px #ffffff10, 0 0 60px #bf7d19, 0 0 10px #ffffff10, 0 0 98px #bf7d19;
+          color: rgba(255, 255, 255, 0.849);
+          font-size: 32x;
+          font-family:  'Cinzel Decorative', cursive;
+        }
+        .countdown{
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.616);
+          background-image: url('images/about-background.svg');
+          border-radius: 50px;
+          color: white;
+          font-size: 38px;
+          margin-top: 5%;
+            padding-top:0.5%;
+            padding-bottom: 1%;
+            text-shadow: 0 0 5px #bf7d199a, 0 0 10px #bf7d199a, 0 0 15px #bf7d199a, 0 0 20px #bf7d199a, 0 0 20px #ffffff75, 0 0 8px #bf7d199a, 0 0 58px #ffffffb7;
+       
+      }
+      
+      .main-count-span{
+          font-size: 90px;
+          font-weight: 800;
+          text-shadow: 0 0 5px #bf7d199a, 0 0 10px #bf7d199a, 0 0 15px #bf7d199a, 0 0 20px #bf7d199a, 0 0 20px #ffffff75, 0 0 8px #bf7d199a, 0 0 58px #ffffffb7;
+      }
+      .countdown-head{
+            font-size: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.692);
+          }
+          .youtube-video{
+            text-align: center;
+            margin-top: 5%;
+          }
+          .alumni-logo{
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+          }
+          .alumni-img{
+            width: 100px;
+          }
+          .alumni-text{
+            animation: slidein 7s 1;
+          }
+          @keyframes slidein{
+            0% {margin-left:60%};
+            100%{margin-left: 10%};
+          }
+          .sponsors-section{
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+            padding-top: 1%;
+            padding-bottom: 4%;
+            background-color: rgba(0, 0, 0, 0.616);
+            background-image: url('images/about-background.svg');
+            border-radius: 50px;
+          }
+          .sponsors-section h3{
+            font-size: 40px;
+            text-shadow: 0 0 5px #ffffff10, 0 0 15px #ffffff10, 0 0 20px #ffffff10, 0 0 40px #ffffff10, 0 0 60px #bf7d19, 0 0 10px #ffffff10, 0 0 98px #bf7d19;
+            
+          }
+          .sponsors-img img{
+            padding-right: 2%;
+            padding-left: 2;
+            padding-bottom: 2%;
+          }
+          .counter-small-elements{
+            font-size: 50px;
+          }
+          
+        
+        @media only screen and (max-width: 950px) 
+        {
+          .head-back{
+            font-size: 6em;
+          }
+        }
+        @media only screen and (max-width: 850px) 
+        {
+          .head-back{
+            font-size: 5em;
+          }
+          P{
+            font-size: 20px;
+          }
+          .youtube-video-css{
+            width: 500px;
+            height: 281px;
+          }
+        }
+        @media only screen and (max-width: 500px) 
+          {
+            .bg{
+              background-image: url('images/m-bg.png');
+              background-repeat: no-repeat;
+              background-position: center;
+              height: 100vh;
+              width: 100vw;
+              position: fixed;
+               z-index: -1;
+            }
+            .head-back{
+              font-size: 2.5em;
+              margin-top: 20%;
+            }
+            .sub-head{
+              font-size: 50px;
+            }
+            p{
+              font-size: 12px;
+            }
+            
+            .alumni-text{
+              font-size: 12px;
+            }
+            button{
+            height: 3em;
+            width: 13em;
+            margin-top: 5%;
+        }
+        .about_event_page{
+          font-size: 15px;
+        }
+        .main-count-span{
+          font-size:40px;
+        }
+        .counter-small-elements{
+            font-size: 20px;
+          }
+          .countdown-head{
+            font-size: 20px;
+          }
+          .gallery-head
+          {
+            font-size: 30px;
+          }
+          .youtube-video-css{
+            width: 350px;
+            height: 197px;
+          }
+          .chat-with-us{
+          left: 75%;
+        }
+        .chat-with-us div{
+          font-size: 15px;
+          
+        }
+        .end-footer{
+          font-size: 8px;
+          text-align: center;
+        }
+        .end-span{
+          display: none;
+        }
+        img{
+          height: auto;
+              align-self: flex-start;
+            }
+          }
+
+    </style>
+</head>
+<body>
+  <div class="bg"></div>
+    <div id="preloader">
+    </div>
+    <div class="chat-with-us">
+      <a href="https://instagram.com/_kesscchakrawyuha_/" target="_blank" style="color: white; text-decoration: none;">
+      <img src="images/chakrawyuha-logo.jpeg" width="50px" style="border: 3px solid #bf7d19;">
+      <div>Chat with us</div></a>
+    </div>
+    <div class="head-back" >Chakrawyuha</div>
+    <div class="sub-head">2K23</div>
+    <p>---------------Come... Break the Barrier---------------</p>
+    <div class="alumni-logo">
+    <img src="images/KES_Alumni.png" class="alumni-img"><br><br>
+    <span class="alumni-text">
+      Event Organised by: KES College Alumni (Ex-student association) Regd. No.: GBBSD-2231/2004
+    </span>
+    </div>
+    <div class="buttons" id="register-buttons"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf150qMnJA3gIMIXuumrvGfyC8n2UPBGeXl_J-DahncHlz-bA/viewform?usp=sf_link" target="_blank"><button class="about-event">CC Registration</button></a><a href="https://docs.google.com/forms/d/e/1FAIpQLSfllg0TYHVzCsO2oqfiBo6TZSZL0TqBJ3eoV08BnBCor9ckpA/viewform?usp=sf_link" target="_blank"><button class="contact-btn">NCP Registration</button></a></div>
+    <br><br><br>
+    <div class="about_event_page">
+        <h2>Celebrating 25 glorious years</h2>
+        Chakrawyuha... is more than an event.. it’s an emotion.  Chakrawyuha started in the year 1998 and is stepping into its 25th year. The festival has grown immensely over the years. Just like how a formation of chakravyuha traps the soldier into itself, our CHAKRAWYUHA attracts and traps everyone into its grandeur.  A silver lining in the dense dark clouds that’s what Chakrawyuha is for us this year! Celebrating the silver jubilee we are reaching a milestone made of hard work and dedication. The entire team of CHAKRAWYUHA  awaits the talent of numerous contingents and have them leave their footprints behind, only to become better next year and, respect and maintain our roots all throughout the event, not only this year but every year that goes by.
+        <br><br>
+<div style="text-align: center;">
+<a href="brochure.pdf" target="_blank" class="brochure-link">Full Brochure</a>    
+</div>
+</div>
+<div class="countdown">
+    <span class="countdown-head">COUNTDOWN</span>
+  <div class="main-timer">
+  <span class="main-count-span" id="count-days"></span>
+  <span class="main-count-span" id="count-hour"></span>
+  <span class="main-count-span" id="count-min"></span>
+  <span class="main-count-span" id="count-sec"></span>
+    </div>
+    <span class="countdown-head">to Break the Barrier</span>   
+</div>
+    <div class="gallery-photos">
+      <div class="gallery-head">
+        <h2>Gallery (2022)</h2>
+        </div>
+        <div class="main-photos">
+            <div class="mySlides fade">
+                <img src="gallery/DSCN1280.JPG" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1336.JPG" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1377.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1690.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1703.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1746.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1782.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1791.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1819.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1831.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1835.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1862.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1864.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1872.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/DSCN1878.JPG" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/IMG_2464.jpg" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/IMG_7044.jpg" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/IMG_7070.jpg" style="width:100%">
+              </div>
+              <div class="mySlides fade">
+                <img src="gallery/IMG_7073.jpg" style="width:100%">
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+              
+        </div>
+    </div>
+    <div class="youtube-video" >
+      <iframe width="760" height="428" class="youtube-video-css" src="https://www.youtube.com/embed/NiVfqlXF5Os" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="sponsors-section">
+      
+        <div class="sponsors-img">
+          <h3>Powered by:</h3>
+          <img src="sponsors/miles-education.png" style="width:100px">
+          <h3>Sponsors by:</h3>
+          <img src="sponsors/career-launch-mba.png" style="width:200px">
+          <img src="sponsors/computrain.png" style="width:150px">
+          <img src="sponsors/finplan.png" style="width:150px">
+          <img src="sponsors/s-tek.png" style="width:150px">
+          <img src="sponsors/raj-computer.PNG" style="width:150px">
+          <img src="sponsors/academy-of-digital-arts.jpg" style="width:150px">
+        </div>
+    </div>
+    <script>
+        var main_preloader = document.getElementById('preloader');
+        window.addEventListener("load", function () {
+            main_preloader.style.opacity = "0";
+            setTimeout(() => {
+                main_preloader.style.display = "none";    
+            }, 500);
+            
+        });
+        var countDownDate = new Date("Feb 12, 2023 0:00:00").getTime();
+        var x = setInterval(function() {
+
+          var now = new Date().getTime();
+            
+          var distance = countDownDate - now;
+            
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+
+          document.getElementById("count-days").innerHTML = days + '<span class="counter-small-elements">d</span> ';
+          document.getElementById("count-hour").innerHTML = hours + '<span class="counter-small-elements">h</span> ';
+          document.getElementById("count-min").innerHTML = minutes +'<span class="counter-small-elements">m</span> ';
+          document.getElementById("count-sec").innerHTML = seconds + '<span class="counter-small-elements">s</span> ';
+
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+
+        
+        </script>
+
+        <div class="end-footer">
+            <a href="https://kesshroffcollege.com/" target="_blank" style="color: white;">KES' B K Shroff College of Arts & M H Shroff College of Commerce Autonomous College</a>
+            <span class="end-span" style="float: right;">
+                <a href="#register-buttons" style="color: white;">Register for events</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://instagram.com/_kesscchakrawyuha_/" target="_blank" style="color: white;"><i class="fa fa-instagram" style="font-size: 20px;"></i></a>
+            </span>
+            
+        </div>
+</body>
+</html>
