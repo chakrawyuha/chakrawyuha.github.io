@@ -558,7 +558,11 @@
 
           if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("count-days").innerHTML ='0<span class="counter-small-elements">d</span> ';
+            document.getElementById("count-hour").innerHTML ='0<span class="counter-small-elements">h</span> ';
+            document.getElementById("count-min").innerHTML = '0<span class="counter-small-elements">m</span> ';
+            document.getElementById("count-sec").innerHTML = '0<span class="counter-small-elements">s</span> ';
+
           }
         }, 1000);
         let slideIndex = 1;
