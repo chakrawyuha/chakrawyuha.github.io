@@ -120,7 +120,7 @@ body.hide-native-cursor { cursor: none; }
   position: absolute;
   margin: -1%;
   bottom: -3%;
-  right: -3%;
+  right: -4%;
   width: 55vw;
   transform: translate3d(var(--x), var(--y), 0);
   z-index: 5;
@@ -323,7 +323,7 @@ body.hide-native-cursor { cursor: none; }
   .castle { 
     width: 85vw;
     right: -10%;
-    bottom: -4%;
+    bottom: -1%;
   }
   .video-container { width: 96vw; padding: 8px; }
   .video-controls { justify-content: space-between; }
