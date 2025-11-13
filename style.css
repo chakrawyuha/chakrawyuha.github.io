@@ -100,6 +100,7 @@ body.hide-native-cursor { cursor: none; }
 
 .hero {
   position: relative;
+  top:-5%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -323,7 +324,7 @@ body.hide-native-cursor { cursor: none; }
   .castle { 
     width: 85vw;
     right: -15px;
-    bottom: 20px;
+    bottom: 5px;
     transform: translate3d(0, 0, 0);
   }
   .video-container { width: 96vw; padding: 8px; }
