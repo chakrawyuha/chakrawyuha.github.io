@@ -1,6 +1,22 @@
 const cursor = document.querySelector('.custom-cursor.site-wide');
 const img = document.querySelector('.cursor-img');
 
+const bgMusic = document.getElementById("bgMusic");
+bgMusic.volume = 0.2;
+
+function playBgMusic() {
+  bgMusic.play().catch((e) => {
+      console.log("Autoplay prevented" + e);
+    });
+}
+
+['click', 'keydown', 'touchstart'].forEach(evt =>
+  document.addEventListener(evt, function onceToStartBg() {
+    playBgMusic();
+    document.removeEventListener(evt, onceToStartBg);
+  }, { once: true, passive: true })
+);
+
 document.addEventListener('mouseenter', e => {
   cursor.style.display = 'block';
 });
@@ -24,6 +40,7 @@ if (img) {
     cursor.classList.add('cursor-missing');
   });
 }
+
 
 (function(){
   if (matchMedia('(hover: none), (pointer: coarse)').matches) return;
@@ -129,8 +146,8 @@ if (img) {
     }
     });
     video.volume = 0.5;
+    if (!bgMusic.paused) bgMusic.pause();
     video.play();
-    
   }
 
   function closeModal(){
@@ -167,7 +184,10 @@ if (img) {
 
   openBtn.addEventListener('click', openModal);
   backdrop.addEventListener('click', closeModal);
-  closeBtn.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click',    () => {
+    bgMusic.play().catch(() => {});
+    closeModal();
+  });
   playBtn.addEventListener('click', togglePlay);
   fsBtn.addEventListener('click', goFullscreen);
 
@@ -189,6 +209,5 @@ if (img) {
       video.load();
     }
   });
+
 })();
-
-
