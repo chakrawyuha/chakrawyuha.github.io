@@ -10,12 +10,7 @@ function playBgMusic() {
     });
 }
 
-['click', 'keydown', 'touchstart'].forEach(evt =>
-  document.addEventListener(evt, function onceToStartBg() {
-    playBgMusic();
-    document.removeEventListener(evt, onceToStartBg);
-  }, { once: true, passive: true })
-);
+playBgMusic();
 
 document.addEventListener('mouseenter', e => {
   cursor.style.display = 'block';
@@ -70,6 +65,13 @@ if (img) {
   }
   requestAnimationFrame(step);
 })();
+
+['click', 'keydown', 'touchstart'].forEach(evt =>
+  document.addEventListener(evt, function onceToStartBg() {
+    playBgMusic();
+    document.removeEventListener(evt, onceToStartBg);
+  }, { once: true, passive: true })
+);
 
 (function initWordFloat(){
   const paragraphs = document.querySelectorAll('p.text');
@@ -162,6 +164,7 @@ if (img) {
   function togglePlay(){
     if (!video.src) return;
     if (video.paused) {
+      if (!bgMusic.paused) bgMusic.pause();
       video.play();
       playBtn.textContent = 'Pause';
     } else {
@@ -211,3 +214,4 @@ if (img) {
   });
 
 })();
+
