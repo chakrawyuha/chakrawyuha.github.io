@@ -29,7 +29,7 @@ body {
   cursor: none;
   background: radial-gradient(circle at center, #0b0015 0%, #130022 80%);
   color: #fff;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 body.hide-native-cursor { cursor: none; }
